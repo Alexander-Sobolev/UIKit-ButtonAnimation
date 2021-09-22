@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         button.tintColor = .white
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.layer.cornerRadius = 15
+        button.addTarget(self, action: #selector(firstSpringButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -27,6 +28,7 @@ class ViewController: UIViewController {
         button.tintColor = .white
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.layer.cornerRadius = 15
+        button.addTarget(self, action: #selector(secondSpringButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -65,6 +67,19 @@ class ViewController: UIViewController {
         view.backgroundColor = #colorLiteral(red: 0.6532924992, green: 1, blue: 0.9991127065, alpha: 1)
         view.addSubview(firstSpringButton)
         view.addSubview(secondSpringButton)
+    }
+    
+    @objc private func firstSpringButtonTapped() {
+        let bounds = firstSpringButton.bounds
+        
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: .curveEaseInOut) {
+            <#code#>
+        } 
+
+    }
+    
+    @objc private func secondSpringButtonTapped() {
+        
     }
 
     private func setConstraints() {
