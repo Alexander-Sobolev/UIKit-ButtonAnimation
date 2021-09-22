@@ -72,9 +72,22 @@ class ViewController: UIViewController {
     @objc private func firstSpringButtonTapped() {
         let bounds = firstSpringButton.bounds
         
-        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: .curveEaseInOut) {
-            <#code#>
-        } 
+        UIView.animate(withDuration: 1,
+                       delay: 0,
+                       usingSpringWithDamping: 0.2,
+                       initialSpringVelocity: 10,
+                       options: .curveEaseInOut) {
+            self.firstSpringButton.bounds = CGRect(
+                x: bounds.origin.x - 50,
+                y: bounds.origin.y,
+                width: bounds.width + 200,
+                height: bounds.height)
+            self.firstSpringButton.titleLabel?.bounds = CGRect(
+                x: bounds.origin.x - 30,
+                y: bounds.height / 2,
+                width: bounds.width + 60,
+                height: 0)
+        }
 
     }
     
