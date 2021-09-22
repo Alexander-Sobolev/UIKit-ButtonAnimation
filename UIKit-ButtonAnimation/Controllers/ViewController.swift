@@ -92,7 +92,27 @@ class ViewController: UIViewController {
     }
     
     @objc private func secondSpringButtonTapped() {
+        let bounds = secondSpringButton.bounds
+        guard let titleFrame = secondSpringButton.titleLabel?.frame else { return }
         
+        UIView.animate(withDuration: 1,
+                       delay: 0,
+                       usingSpringWithDamping: 0.2,
+                       initialSpringVelocity: 10,
+                       options: .curveEaseInOut) {
+            self.secondSpringButton.bounds = CGRect(
+                x: bounds.origin.x - 50,
+                y: bounds.origin.y,
+                width: bounds.width + 200,
+                height: bounds.height)
+            self.secondSpringButton.titleLabel?.frame = CGRect(
+                x: titleFrame.origin.x + titleFrame.width,
+                y: titleFrame.origin.y,
+                width: titleFrame.width * 2,
+                height: titleFrame.height)
+            self.secondSpringButton.setTitle("Success!", for: .normal)
+        }
+
     }
 
     private func setConstraints() {
