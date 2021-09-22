@@ -10,7 +10,6 @@
 		B44D58F826FB6F740026353C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44D58F726FB6F740026353C /* AppDelegate.swift */; };
 		B44D58FA26FB6F740026353C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44D58F926FB6F740026353C /* SceneDelegate.swift */; };
 		B44D58FC26FB6F740026353C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44D58FB26FB6F740026353C /* ViewController.swift */; };
-		B44D58FF26FB6F740026353C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B44D58FD26FB6F740026353C /* Main.storyboard */; };
 		B44D590126FB6F760026353C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B44D590026FB6F760026353C /* Assets.xcassets */; };
 		B44D590426FB6F760026353C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B44D590226FB6F760026353C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -20,7 +19,6 @@
 		B44D58F726FB6F740026353C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B44D58F926FB6F740026353C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B44D58FB26FB6F740026353C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B44D58FE26FB6F740026353C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B44D590026FB6F760026353C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B44D590326FB6F760026353C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B44D590526FB6F760026353C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,15 +54,38 @@
 		B44D58F626FB6F740026353C /* UIKit-ButtonAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				B44D590B26FB718F0026353C /* Aplication */,
+				B44D590C26FB71A30026353C /* Controllers */,
+				B44D590D26FB71B50026353C /* Resources */,
+			);
+			path = "UIKit-ButtonAnimation";
+			sourceTree = "<group>";
+		};
+		B44D590B26FB718F0026353C /* Aplication */ = {
+			isa = PBXGroup;
+			children = (
 				B44D58F726FB6F740026353C /* AppDelegate.swift */,
 				B44D58F926FB6F740026353C /* SceneDelegate.swift */,
+			);
+			path = Aplication;
+			sourceTree = "<group>";
+		};
+		B44D590C26FB71A30026353C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				B44D58FB26FB6F740026353C /* ViewController.swift */,
-				B44D58FD26FB6F740026353C /* Main.storyboard */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B44D590D26FB71B50026353C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				B44D590026FB6F760026353C /* Assets.xcassets */,
 				B44D590226FB6F760026353C /* LaunchScreen.storyboard */,
 				B44D590526FB6F760026353C /* Info.plist */,
 			);
-			path = "UIKit-ButtonAnimation";
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +147,6 @@
 			files = (
 				B44D590426FB6F760026353C /* LaunchScreen.storyboard in Resources */,
 				B44D590126FB6F760026353C /* Assets.xcassets in Resources */,
-				B44D58FF26FB6F740026353C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,14 +166,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B44D58FD26FB6F740026353C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B44D58FE26FB6F740026353C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B44D590226FB6F760026353C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -288,7 +300,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XRTUKAGRTL;
-				INFOPLIST_FILE = "UIKit-ButtonAnimation/Info.plist";
+				INFOPLIST_FILE = "UIKit-ButtonAnimation/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +319,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XRTUKAGRTL;
-				INFOPLIST_FILE = "UIKit-ButtonAnimation/Info.plist";
+				INFOPLIST_FILE = "UIKit-ButtonAnimation/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
