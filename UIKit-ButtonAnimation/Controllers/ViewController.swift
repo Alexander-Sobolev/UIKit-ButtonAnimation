@@ -41,6 +41,24 @@ class ViewController: UIViewController {
         
         setupViews()
         setConstraints()
+        
+        firstButtonSpringConstraint.constant -= view.bounds.width
+        secondButtonSpringConstraint.constant -= view.bounds.width
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut) {
+            self.firstButtonSpringConstraint.constant += self.view.bounds.width
+            self.view.layoutIfNeeded()
+        }
+        
+        UIView.animate(withDuration: 0.5, delay: 0.2, options: .curveEaseOut) {
+            self.secondButtonSpringConstraint.constant += self.view.bounds.width
+            self.view.layoutIfNeeded()
+        }
+
     }
 
     private func setupViews() {
